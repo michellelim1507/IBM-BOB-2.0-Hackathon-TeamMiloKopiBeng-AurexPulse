@@ -25,6 +25,7 @@ Requirements
 git clone https://github.com/michellelim1507/IBM-BOB-2.0-Hackathon-TeamMiloKopiBeng-AurexPulse.git
 
 cd IBM-BOB-2.0-Hackathon-TeamMiloKopiBeng-AurexPulse
+
 python -m venv .venv
 
 ## For Windows
