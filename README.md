@@ -3,6 +3,12 @@ AurexPulse
 AI-powered code intelligence and security platform built with IBM Bob 2.0 to detect, diagnose, and resolve software issues before they become emergencies.
 AurexPulse is a code intelligence and security platform built with IBM Bob 2.0. It analyzes public GitHub repositories, identifies potential code issues, and guides developers from issue discovery to recommended next steps.
 
+## Problem
+A development team can spend hours tracking down problem across the project. The application runs, but somewhere in the repository is a possible hardcoded password, an outdated dependency, security risks or code that no longer matches the project requirements. Finding and understanding these issues takes time as developers still must understand where the issues are, how serious it is, and what to do next. 
+
+## Solutions
+
+
 ## Features
 - Analyze a public GitHub repository
 - Detect project types and inspect source files
