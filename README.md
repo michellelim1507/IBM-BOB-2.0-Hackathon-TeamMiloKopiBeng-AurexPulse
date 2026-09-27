@@ -35,9 +35,13 @@ source .venv/bin/activate
 
 ## Install dependencies and start the web app:
 pip install -r requirements.txt
+
 python webapp.py
+
 Then open http://127.0.0.1:5000 in your browser.
+
 To run the command-line workflow instead, use:
+
 python main.py
 
 ## Project structure
