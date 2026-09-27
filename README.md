@@ -1,4 +1,6 @@
-# IBMBOB2.0-Hackathon-TeamMiloKopiBeng-AurexPulse
+# IBM BOB 2.0 Hackathon 
+# TeamMiloKopiBeng-AurexPulse
+
 AurexPulse
 AI-powered code intelligence and security platform built with IBM Bob 2.0 to detect, diagnose, and resolve software issues before they become emergencies.
 AurexPulse is a code intelligence and security platform built with IBM Bob 2.0. It analyzes public GitHub repositories, identifies potential code issues, and guides developers from issue discovery to recommended next steps.
