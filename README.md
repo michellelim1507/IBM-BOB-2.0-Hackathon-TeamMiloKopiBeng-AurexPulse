@@ -27,36 +27,53 @@ The idea behind AurexPulse is simple, an alert is useful only when developers kn
 ## IBM BOB Usage Statement
 > **Example project:** The screenshots below show IBM Bob analyzing `flask-shop-master`, a separate sample Flask application. It is included only to demonstrate the analysis and remediation workflow; it is not part of AurexPulse.
 
+<strong>Part 1 – AI-Powered Code Analysis: Task Context</strong><br>
 <p align="center">
-  <img src="docs/screenshots/tokenused.jpeg" alt="IBM Bob task context and usage" width="850">
+  <img src="tokenused.jpeg" alt="IBM Bob task context and usage" width="850">
 </p>
-Part 1 – AI-Powered Code Analysis: Task Context
-![Token usage](docs/screenshots/tokenused.jpeg)
+
+<p align="center">
+  <strong>Shows the task context used to analyze the sample Flask project.</strong><br>
+</p>
+
 This screenshot shows the Bob task context used to analyse the Flask Shop workspace. The project consumed about 105.4k of the available context window, showing that Bob had access to a substantial amount of project information for code understanding. This stage supports AurexPulse’s AI-Powered Code Analysis by allowing the model to inspect the project as a whole instead of reviewing isolated files. It provides the foundation for identifying outdated code, understanding the project architecture, explaining the purpose of major components, and tracing the relationship between frontend, backend, and database logic.
+
+
+<strong>Part 2 – Security: Privacy, Database and Remaining Risk Review</strong><br>
 <p align="center">
-  <img src="docs/screenshots/tokenused.jpeg" alt="IBM Bob task context and usage" width="850">
+  <img src="Security%20Privacy%2C%20Database%20and%20Remaining%20Risk%20Review.jpeg" alt="Security, privacy, database, and remaining-risk review" width="850">
 </p>
 
-Part 2 – Security: Privacy, Database and Remaining Risk Review
-![Security Privacy, Database and Remaining Risk Review](docs/screenshots/Security%20Privacy%2C%20Database%20and%20Remaining%20Risk%20Review.jpeg)
+<p align="center">
+  <strong>Summarizes security fixes and risks flagged for manual review.</strong><br>
+</p>
+
 This screenshot focuses on AurexPulse’s Security function. It shows secure-code improvements such as replacing random.choice with secrets.choice for reset tokens, replacing a removed inspection API, and updating deprecated logging. More importantly, Bob reports critical unresolved risks that require human action, including a committed RSA private key, a hardcoded application secret, exposed payment configuration, a default database password, an insufficiently protected test-payment route, and file-upload validation concerns. These findings demonstrate privacy-information leakage, user/database protection, credential security, and security-rule checking. Keeping unresolved risks visible also prevents automated fixes from creating a false impression that the project is completely secure.
+
+
+<strong>Part 3 – Emergency Room: Diagnosis and Auto Fix</strong><br>
 <p align="center">
-  <img src="docs/screenshots/Security%20Privacy%2C%20Database%20and%20Remaining%20Risk%20Review.jpeg" alt="Security, privacy, database, and remaining-risk review" width="850">
+  <img src="emergencyroomautofix.jpeg" alt="Emergency Room diagnosis and autofix" width="850">
 </p>
 
-Part 3 – Emergency Room: Diagnosis and Auto Fix
-![Emergency Room autofix](docs/screenshots/emergencyroomautofix.jpeg)
+<p align="center">
+  <strong>Shows the workflow investigating issues and applying targeted fixes.</strong><br>
+</p>
+
 This screenshot demonstrates the AurexPulse Emergency Room workflow. Bob first explored the codebase and collected evidence before applying targeted fixes to confirmed problems. The visible changes include protection against an unsafe login redirect, while the task panel lists additional fixes such as an ownership check, stronger password-reset token generation, removal of deprecated code, and logging updates. This represents AI Diagnosis, AI Recommendation, and Auto Fix in one workflow. Bob also attempted to run tests; when the Python runtime was unavailable, it reported the limitation and performed static verification instead of claiming a successful runtime test.
+
+
+<strong>Parts 1, 2 and 3 – Architecture, Security Findings and Applied Fixes</strong><br>
 <p align="center">
-  <img src="docs/screenshots/emergencyroomautofix.jpeg" alt="Emergency Room diagnosis and autofix" width="850">
+  <img src="Architecture%2C%20Security%20Findings%20and%20Applied%20Fixes.jpeg" alt="Architecture, security findings, and applied fixes" width="850">
 </p>
 
-Parts 1, 2 and 3 – Architecture, Security Findings and Applied Fixes
-![Architecture, Security Findings and Applied Fixes](docs/screenshots/Architecture%2C%20Security%20Findings%20and%20Applied%20Fixes.jpeg)
-This screenshot connects all three AurexPulse areas. Bob summarizes the application architecture as a Flask and SQLAlchemy e-commerce system and describes the flow between templates, forms, the model layer, database, and optional caching. This supports frontend and backend understanding and explains how the code is structured. The same report identifies security weaknesses and prioritizes them by severity, including an open redirect, missing order ownership validation, a Python compatibility issue, weak reset-token generation, and a deprecated logging call. The table then records the corresponding changes, giving developers a clear diagnosis-to-fix trail.
 <p align="center">
-  <img src="docs/screenshots/Architecture%2C%20Security%20Findings%20and%20Applied%20Fixes.jpeg" alt="Architecture, security findings, and applied fixes" width="850">
+  <strong>Summarizes the sample application's architecture, findings, and fixes.</strong><br>
 </p>
+
+This screenshot connects all three AurexPulse areas. Bob summarizes the application architecture as a Flask and SQLAlchemy e-commerce system and describes the flow between templates, forms, the model layer, database, and optional caching. This supports frontend and backend understanding and explains how the code is structured. The same report identifies security weaknesses and prioritizes them by severity, including an open redirect, missing order ownership validation, a Python compatibility issue, weak reset-token generation, and a deprecated logging call. The table then records the corresponding changes, giving developers a clear diagnosis-to-fix trail.
+
 
 
 
