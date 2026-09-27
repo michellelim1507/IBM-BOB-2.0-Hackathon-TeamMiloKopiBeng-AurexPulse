@@ -8,6 +8,7 @@ AurexPulse is a code intelligence and security platform built with IBM Bob 2.0. 
 A development team can spend hours tracking down problem across the project. The application runs, but somewhere in the repository is a possible hardcoded password, an outdated dependency, security risks or code that no longer matches the project requirements. Finding and understanding these issues takes time as developers still must understand where the issues are, how serious it is, and what to do next. 
 
 ## Solutions
+![AurexPulse homepage](docs/screenshots/homepage.png)
 
 
 ## Features
