@@ -36,11 +36,10 @@ To run the command-line workflow instead, use:
 python main.py
 
 Project structure
-.
-├── emergency_room/   # High-risk issue workflow
-├── main.py           # Command-line workflow
-├── webapp.py         # Flask web application
-├── analysisPage.html # Analysis page
-├── homepage.html     # Home page
-└── requirements.txt  # Python dependencies
+- emergency_room/   # High-risk issue workflow
+- main.py           # Command-line workflow
+- webapp.py         # Flask web application
+- analysisPage.html # Analysis page
+- homepage.html     # Home page
+- requirements.txt  # Python dependencies
 
